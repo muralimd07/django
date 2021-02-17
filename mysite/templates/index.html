@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About</title>
+    <title>Home</title>
 </head>
 
 <style type="text/css">
 
 .footer
 {
-	position: absolute;
+	position:fixed;
 	bottom:0%;
 	background-color:seagreen;
 	width:100%;
@@ -20,7 +20,7 @@
 
 .header
 {
-	position: absolute;
+	position:fixed;
 	top:0%;
 	background-color:seagreen;
 	width:100%;
@@ -51,8 +51,6 @@
 .ul a:hover
 {
 	
-	padding: 10px;
-	background-color:black;
 	color: red;
 }
 
@@ -69,7 +67,47 @@ padding: 10px;
 	padding: 10%;
 	margin: auto;
 }
+#design
+{
+	background-color: cyan;
+	padding: 20px;
+	width: 300px;
+	border: 2px;
+	border-color: black;
+	border-style: dashed;
+}
+.lb
+{
+	padding-right: 20px;
 
+	font-size: 18px;
+	text-shadow: 2px 1px red ;
+
+}
+.buttons
+{
+	width: 70px;
+	height: 40px;
+	background-color: seagreen;
+	border: none;
+	border-color: white;
+	margin-left: 60px;
+	color: white;
+}
+.buttons:hover
+{
+	
+	background:linear-gradient(lightblue,purple,violet);
+
+	border-radius: 10px;
+	
+}
+.tbox
+{
+	width: 150px;
+	height: 20px;
+	border-style: ridge;
+}
 
 </style>
 
@@ -96,12 +134,14 @@ padding: 10px;
 
 <h1 >Register Form</h1>
 
-<form action="" method="POST">
+<form id="design" action="" method="POST">
 	{% csrf_token %}
-<input type="text" name="title" placeholder="title" required="please fill"><br><br>
-<input type="number" name="age" placeholder="age" required="please fill">
-<br>
-<input type="submit" name="sub" >
+
+
+<label class="lb">Name</label><input class="tbox" type="text" name="title" placeholder="Title" required="please fill"><br><br>
+<label class="lb">Age &nbsp;&nbsp;</label><input class="tbox" type="number" name="age" placeholder="Age" required="please fill" >
+<br><br>
+<input class="buttons" type="submit" name="sub" >
 </form>
 <ul>
 
